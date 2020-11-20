@@ -150,6 +150,9 @@
     align-items: flex-start;
     flex-direction: column;
   }
+  footer div.container p {
+    display: none;
+  }
 
   #social-media ul li {
     margin: 0 10px;
@@ -170,7 +173,9 @@
 
   #logo-footer {
     align-self: center;
+    margin-top: 15px;
     order: 3;
+    width: 120px;
   }
 }
 

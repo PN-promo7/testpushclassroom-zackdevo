@@ -9,11 +9,48 @@ body {
   font-size: 100%;
   margin: 0;
   position: relative;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: rgba(125, 119, 114, 0.8);
+  text-decoration: none;
+}
+/* Même règle de hover parceque les liens dans le footer ne sont pas pris en compte par la première */
+a:hover {
+  color: #c080c0;
+}
+
+footer .links:hover a {
+  color: #c080c0;
+}
+
+a {
+  transition: 300ms;
+}
+
+a svg {
+  fill: rgba(125, 119, 114, 0.8);
+  width: 30px;
+}
+
+a:hover svg {
+  fill: #c080c0;
+}
+
+ul {
+  padding-left: 0;
 }
 
 /*************** TYPO ***************/
@@ -68,10 +105,6 @@ nav a {
   font-size: 1.3rem;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-}
 
 #logo-site {
   width: 150px;
@@ -79,7 +112,6 @@ nav ul {
 
 .menu-nav {
   display: inline-block;
-  list-style-type: none;
   margin: 0 40px;
 }
 
@@ -90,6 +122,55 @@ nav ul {
 nav div.container {
   display: flex;
   justify-content: space-between;
+}
+
+/*************** FOOTER ***************/
+footer {
+  background-color: #604060;
+}
+
+footer div.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer div.container a, footer div.container p {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+#logo-footer {
+  display: flex;
+  width: 170px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.s-links {
+  display: flex;
+  flex-direction: row;
+}
+
+#social-media ul {
+  justify-content: center;
+  display: flex;
+  margin: 0;
+}
+
+#social-media a {
+  margin-right: 25px;
+}
+
+#social-media a.twitter {
+  margin-right: 0;
 }
 
 /*************** HEADER ***************/
@@ -111,11 +192,6 @@ header {
   top: 15%;
 }
 
-a {
-  color: rgba(125, 119, 114, 0.8);
-  text-decoration: none;
-}
-
 a.fav svg.rempli {
   display: none;
 }
@@ -128,76 +204,6 @@ a.fav:hover svg.rempli {
   display: inline-block;
 }
 
-a:hover {
-  color: #c080c0;
-}
-
-a {
-  transition: 300ms;
-}
-
-a svg {
-  fill: rgba(125, 119, 114, 0.8);
-  width: 30px;
-}
-
-a:hover svg {
-  fill: #c080c0;
-}
-
-ul {
-  padding-left: 0;
-}
-
-/*************** FOOTER ***************/
-footer {
-  background-color: #604060;
-}
-
-footer div.container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-footer div.container a {
-  color: white;
-  display: flex;
-  flex-direction: row;
-}
-
-footer .links:hover a {
-  color: #c080c0;
-}
-
-#logo-footer {
-  display: flex;
-  width: 170px;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px;
-}
-
-#social-media ul {
-  display: flex;
-}
-
-#social-media a {
-  margin-right: 25px;
-}
-
-#social-media a.twitter {
-  margin-right: 0;
-}
-
-.links:last-child {
-  margin-right: 0;
-}
 
 /*************** PRODUITS ***************/
 #mventes {
@@ -392,7 +398,6 @@ a:hover .overlay {
   justify-content: space-between;
   margin-top: 20px;
 }
-
 
 .services-logo {
   text-align: center;
